@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="images/x-icon" href="img/iconos/favicon.ico">
+      <!-- Liks Css -->
+  
+      <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/estilos.css">
+      <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+     <!-- Start of  Zendesk Widget script -->
+      <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=fe1ddb45-c7f9-461b-b394-412fa278472f"> </script>
+<!-- End of  Zendesk Widget script -->
+      <!----------------------->
+
+      <script src="js/lib/scroll-efecto.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <title>Inicio / Huellitas de Vida</title>
+</head>
+<body>
+
+    <div class="portada c">
+
+        <div class="portadaVideo">
+        <video src="img/VideoHuellitasDeVida.mp4" autoplay muted loop alt="Video Huellitas de Vida" ></video>
+        </div>
+        <div class="fondoContenido">
+        </div>
+        <div class="portadaContenido">
+          <p class="fuentePrimaria texto-azul">Huellitas <span class="texto-verde">de Vida</span></p>
+          <div class="menuPrincipal">
+            <nav>
+              <ul>
+                <li class="texto-azul"><i class="fas fa-paw"></i> Inicio</li>
+                <li class="texto-azul" id="planesBtn"><i class="fas fa-paw"></i> Planes</li>
+                <li class="texto-azul" id="nosotrosBtn"><i class="fas fa-paw"></i> Sobre Nosotros</li>
+                <li class="texto-azul" id="recordatoriosBtn"><i class="fas fa-paw"></i> Recordatorios</li>
+                <li class="texto-azul" id="contactoBtn"><i class="fas fa-paw"></i> Contactenos</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="centrar">
+          <div class="formulario formularioLllamame mt-1">
+            <p class="text-center fuentePrimaria llamameTitulo texto-verde mt-3">¡Llamame Gratis!</p>
+            <div class="form__group field" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+              <input type="input" class="form__field texto-blanco borde-buttom" placeholder="Nombre" name="nombre" id='nombre'/>
+              <label for="nombre" class="form__label texto-blanco">Nombre y Apellido</label>
+            </div>
+            <div class="form__group field">
+              <input type="number" class="form__field texto-blanco borde-buttom" placeholder="Celular" name="celular" id='celular'/>
+              <label for="celular" class="form__label texto-blanco">Numero De Celular</label>
+            </div>
+            <div class="form__group field">
+              <select name="tipo_plan" id="tipo_plan" class="form__field">
+                <optgroup label="Te Interesa">
+                  <option value="1">Plan Huellitas Memoria</option>
+                  <option value="2">Plan Huellitas Despedida</option>
+                </optgroup>
+              </select>
+            </div>
+                 <label class="container mt-3 texto-azul">Acepta Terminos Y Condiciones
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark checka"></span>
+                </label>
+                <div class="mensajes text-center" id="mensajes"></div>
+                <div class="centrar mt-4">
+                  <button class="texto-blanco active fuenteSecundaria btnContaratar bgVerde" id="llamame">¡Llamarme!</button>
+                </div>
+              <br>
+          </div>
+        </div> 
+        </div>
+    </div>
+            <!-- Planes -->
+
+            <div class="container-fluid planes" id="planes">
+
+                <div class="row">
+  
+                  <div class="col-lg-6 col-md-6 col-sm-12 ">
+                        <h3 class="text-center mt-5 fuenteSecundaria fTamaño-3em texto-azul" >PLAN HUELLITAS MEMORIA</h3>
+                      <div class="centrar">
+                        <div class="card mt-3" id="cardPlanHuellitasMemoria" style="width: 25rem;" >
+                          <div class="card-body">
+                            <p class="card-text text-center">Cuando contratas este plan, y al finalizar el mismo podrás llevar a tu amigo fiel en una urna especial para Él.</p>                          
+                            <h5 class="card-title text-center">Incluye</h5>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-center">Traslado del cuerpo de la mascota</li>
+                            <li class="list-group-item text-center">Bioreducción por hidrolisis alcalina</li>
+                            <li class="list-group-item text-center">Porta retrato con foto de la mascota</li>
+                            <li class="list-group-item text-center cursor-pointer texto-azul cursor-pointer" id="conoceHM">Conoce Más <i class="fas fa-plus-circle"></i></li>
+                          </ul>
+                          <div class="planAtras bgAzul" id="tarjetaPlanHuellitasMemoria">
+                            <div class="centrar">
+                              <img src="img/iconos/iconoPlanHuellitasMemoria.png" alt="iconoPlanHuellitasMemoria" class="mt-2">
+                            </div>
+                            <p class="text-center texto-blanco mt-4">
+                              Trasladamos el cuerpo de tú mascota desde el sitio del fallecimiento (hasta una distancia no superior a 50 kilómetros) donde se tealizara el proceso de biorreducción por hidrolisis alcalina y entrega de cetificado, un porta retratos con foto de la mascota, urna para cenizas, atención al duelo por parte del contratista.
+                            </p>
+                            <div class="centrar mt-4">
+                              <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar">¡Contrata Ahora!</button></a>
+                            </div>
+                            <div class="centrar">
+                              <p class="text-center mt-2 texto-blanco cursor-pointer" id="volverPlanHuellitasMemoria">Volver</p>
+                            </div>
+                          </div>
+                          <div class="centrar mt-4">
+                            <a href="vistas/formularioContrato.html"><button class="bgAzul texto-blanco active fuenteSecundaria btnContaratar">¡Contrata Ahora!</button></a>
+                          </div>
+                          <br>
+                        </div>
+                        
+                      </div>
+                      <br>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 plan2">
+                    <h3 class="text-center mt-5 fuenteSecundaria fTamaño-3em texto-verde">PLAN HUELLITAS DESPEDIDA</h3>
+                    <div class="centrar" >
+                      <div class="card mt-3 bgBlanco " id="cardPlanHuellitasDespedida" style="width: 25rem;">
+                        <div class="card-body">
+                          <p class="card-text text-center">El plan huellitas de vida, garantiza que la memoria de tu mascota, se convierta en una nueva vida en su destino final</p>
+                          <h5 class="card-title text-center">Incluye</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item bgTransaparente text-center">Traslado del cuerpo de la mascota</li>
+                          <li class="list-group-item bgTransaparente text-center">Bioreducción por hidrolisis alcalina</li>
+                          <li class="list-group-item bgTransaparente text-center">Porta retrato con foto de la mascot</li>
+                          <li class="list-group-item bgTransaparente text-center cursor-pointer texto-verde cursor-pointer" id="conocePD">Conoce Más <i class="fas fa-plus-circle" ></i></li>
+                        </ul>
+                        <div class="planAtras bgVerde" id="tarjetaPlanHuellitasDespedida">
+                          <div class="centrar">
+                            <img src="img/iconos/iconoPlanHuellitasDespedida.png" alt="iconoPlanHuellitasDespedida" class="mt-2">
+                          </div>
+                          <p class="text-center texto-blanco mt-4">
+                            Trasladamos el cuerpo de tú mascota desde el sitio del fallecimiento (hasta una distancia no superior a 50 kilómetros) donde se tealizara el proceso de biorreducción por hidrolisis alcalina y entrega de cetificado, un porta retratos con foto de la mascota, atención al duelo por parte del contratista.
+                          </p>
+                          <div class="centrar mt-4">
+                            <a href="vistas/formularioContrato.html"><button class="texto-verde active fuenteSecundaria btnContaratar">¡Contrata Ahora!</button></a>
+                          </div>
+                          <div class="centrar">
+                            <p class="text-center mt-2 texto-blanco cursor-pointer" id="volverPlanHuellitasDespedida">Volver</p>
+                          </div>
+                        </div>
+                        <div class="centrar mt-4">
+                          <a href="vistas/formularioContrato.html"><button class="bgVerde texto-blanco active fuenteSecundaria btnContaratar">¡Contrata Ahora!</button></a>
+                          </div>
+                        <br>
+                      </div>
+
+                    </div>
+
+                    <br>
+                  </div>
+
+                </div>
+              </div>
+  
+           <!-- Fin Planes -->
+
+           <!-- Sello de Garantia -->
+
+              <div class="container-fluid sello"  id="nosotros">
+                <div class="row ">
+
+                  <div class="col-lg-5 col-md-6 col-sm-12 bgAzul">
+                    <div class="bgAzul">
+                    <p class="text-center texto-verde fuenteSecundaria mt-5 em2">Nuestro Sello de Garantia</p>
+                    <div class="centrar imgSello">
+                      <div class="img animated flipInX">
+                      <img src="img/iconos/iconoSelloDeCalidad.png"  alt="Sello de Calida 
+                      Huellitas de Vida">
+                       </div>
+                      <br>
+                    </div>
+                    <p class="text-center mt-5 texto-blanco">Uno de los mayores compromisos de Huellitas De Vida es mantener los más altos estándares de servicios y calidad. Los que siempre estarán a la vanguardia y amigable con el medio ambiente. <br>Es por lo anterior, que Huellitas de Vida, ha desarrollado un servicio integral, para brindar acompañamiento en los momentos de perdida de una Mascota.</p>
+                    <div class="centrar mt-4">
+                      <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar" data-toggle="tooltip" data-placement="top" title="Tooltip on top">¡Contrata Ahora!</button></a>
+                    </div>
+                    <br>
+                  </div>
+                  </div>
+                  <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div class="fondoSello">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+           <!-- fin Sello de Garantia -->
+
+
+                <!-- formulario de Contacto y Metodos de Recaudo -->
+
+                       <div class="contactenos" id="contactenos">
+                        <div class="fondoContacto">
+                            <div class="tiposdePago">
+                              <p class="text-center em2 texto-blanco">Recuerda Nustros Metodos de Pago</p>
+                              <div class="centrar">
+                              <img src="img/epayco_pago_seguro_gray.png" alt="">
+        
+                            </div>
+                            <div class="centrar mt-4">
+                              <button class="texto-blanco active fuenteSecundaria btnContaratar bgAzul">Realizar Tu Pago</button>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="formularioContacto">
+                          <p class="text-center fuenteSecundaria texto-verde mt-5 em3">Contactenos</p>
+                          <div class="formulario">
+                            <div class="form__group field">
+                              <input type="input" class="form__field texto-blanco borde-buttom" placeholder="Nombre" name="nombre_contacto" id='nombre_contacto' />
+                              <label for="nombre_contacto" class="form__label texto-blanco">Nombre y Apellido</label>
+                            </div>
+                            <div class="form__group field">
+                              <input type="number" class="form__field texto-blanco borde-buttom" placeholder="Celular" name="celular_contacto" id='celular_contacto' required />
+                              <label for="celular_contacto" class="form__label texto-blanco">Numero De Celular</label>
+                            </div>
+                            <div class="form__group field">
+                              <input type="email" class="form__field texto-blanco borde-buttom" placeholder="Email" name="email_contacto" id='email_contacto' required />
+                              <label for="email_contacto" class="form__label texto-blanco">Correo Electronico</label>
+                            </div>
+                            <div class="form__group field">
+                              <textarea name="mensaje_contacto" class="form__field texto-blanco borde-buttom" id="mensaje_contacto" cols="10" rows="5"></textarea>
+                              <label for="mensaje_contacto" class="form__label texto-blanco">Tu Mensaje Para Nosotros</label>
+                            </div>
+                                <label class="container mt-3 texto-azul">Acepta Terminos Y Condiciones
+                                  <input type="checkbox" checked="checked">
+                                  <span class="checkmark checkb"></span>
+                                </label>
+                                <div class="mensajes" id="mensajesContacto"></div>  
+                                <div class="centrar mt-4">
+                                  <button class="texto-blanco active fuenteSecundaria btnContaratar bgAzul" id="btnContacto">Enviar Mensaje</button>
+                                </div>
+                              <br>
+                          </div>
+                        </div>
+                      </div>
+                        
+
+
+           <!-- Honras Funebres 
+
+              <div class="container-fluid">
+                <p class="texto-verde em2 mt-5 text-center fuenteSecundaria">Honras Funebres Para Tú Mascota</p>
+                <br>
+                <div class="row">
+                  <div class="col-lg-4 col-sm-12">
+                    <div class="centrar">
+                    <div class="card borde-azul mb-3" style="max-width: 18rem;">
+                      <div class="card-header bgAzul texto-blanco text-center">Conoce Mas</div>
+                      <div class="card-body text-primary">
+                        <h5 class="card-title text-center texto-azul">Porta Retratos De Tu Mascota</h5>
+                        <p class="card-text texto-azul">Llevaras a tú amigo a todas partes, recordando los maravillosos momentos que pasaron juntos</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12">
+                    <div class="centrar">
+                    <div class="card borde-azul mb-3" style="max-width: 18rem;">
+                      <div class="card-header bgAzul texto-blanco text-center">Conoce Mas</div>
+                      <div class="card-body text-primary">
+                        <h5 class="card-title text-center texto-azul">Certificado De<br>Cremación</h5>
+                        <p class="card-text texto-azul">Llevaras a tú amigo a todas partes, recordando los maravillosos momentos que pasaron juntos</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12">
+                    <div class="centrar">
+                    <div class="card borde-azul mb-3" style="max-width: 18rem;">
+                      <div class="card-header bgAzul texto-blanco text-center">Conoce Mas</div>
+                      <div class="card-body text-primary">
+                        <h5 class="card-title text-center texto-azul">Traslado de Tú<br> Mascota</h5>
+                        <p class="card-text texto-azul">Llevaras a tu amigo a todas partes, recordando los maravillosos momentos que pasaron juntos</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <br>
+                
+                <div class="row">
+                  <div class="col-lg-4 col-sm-12">
+                    <div class="centrar">
+                    <div class="card borde-verde mb-3" style="max-width: 18rem;">
+                      <div class="card-header bgVerde texto-blanco text-center">Conoce Mas</div>
+                      <div class="card-body text-primary">
+                        <h5 class="card-title text-center texto-verde">Traslado de Tú<br> Mascota</h5>
+                        <p class="card-text texto-verde">Llevaras a tu amigo a todas partes, recordando los maravillosos momentos que pasaron juntos</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12">
+                    <div class="centrar">
+                    <div class="card borde-verde mb-3" style="max-width: 18rem;">
+                      <div class="card-header bgVerde texto-blanco text-center">Conoce Mas</div>
+                      <div class="card-body text-primary">
+                        <h5 class="card-title text-center texto-verde">Traslado de Tú<br> Mascota</h5>
+                        <p class="card-text texto-verde">Llevaras a tu amigo a todas partes, recordando los maravillosos momentos que pasaron juntos</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12">
+                    <div class="centrar">
+                    <div class="card borde-verde mb-3" style="max-width: 18rem;">
+                      <div class="card-header bgVerde texto-blanco text-center">Conoce Mas</div>
+                      <div class="card-body text-primary">
+                        <h5 class="card-title text-center texto-verde">Traslado de Tú<br> Mascota</h5>
+                        <p class="card-text texto-verde">Llevaras a tu amigo a todas partes, recordando los maravillosos momentos que pasaron juntos</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>            
+              </div>
+
+            fin Honras Funebres -->
+
+            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 h-100" src="img/recordatorioPortaRetratos.jpg" alt="Porta retratos Huellitas de Vida">
+                  <div class="carousel-caption d-none d-md-block bgNegroTrasparencia">
+                    <h2 class="animated slideInUp delay-1.5s">Porta Retratos De Tu Mascota</h2>
+                    <p class="text-center animated slideInLeft delay-1s">Llevaras a tu amigo a todas partes,<br> recordando los maravillosos momentos que pasaron juntos</p>
+                    <div class="centrar mt-4">
+                      <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar animated slideInRight">¡Contrata Ahora!</button></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 h-100" src="img/recordatorioBiorreduccion.jpg" alt="Birreducción Alcalina Huellitas de Vida">
+                  <div class="carousel-caption d-none d-md-block bgNegroTrasparencia">
+                    <h2 class="animated slideInUp">Bioreducción Por Hidrolisis Alcalina</h2>
+                    <p class="text-center animated slideInLeft delay-1s">Es el proceso químico por el cual tu mascota, <br>va ha ser reducido para convertirse en cenizas</p>
+                    <div class="centrar mt-4">
+                      <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar animated slideInUp">¡Contrata Ahora!</button></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 h-100" src="img/recordatorioAcompañamiento.jpg" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block bgNegroTrasparencia">
+                    <h2 class="animated slideInUp">Te Acompañamos</h2>
+                    <p class="text-center animated slideInLeft delay-1s">Nuestro equipo de profesionales te acompañara <br> durante el proceso de duelo por tu mascota</p>
+                    <div class="centrar mt-4">
+                      <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar animated slideInUp">¡Contrata Ahora!</button></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 h-100" src="img/recordatorioUrnajpg.jpg" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block bgNegroTrasparencia">
+                    <h2 class="animated slideInUp">Urna Especial Para Tu Amigo</h2>
+                    <p class="text-center animated slideInLeft delay-1s">Tenemos Urnas especiales para tú mascota,<br> estarás junto a ella durante toda tu vida</p>
+                    <div class="centrar mt-4">
+                      <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar animated slideInUp">¡Contrata Ahora!</button></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 h-100" src="img/recordatorioCerificado.jpg" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block bgNegroTrasparencia">
+                    <h2 class="animated slideInDown">Certificado De Cremación</h2>
+                    <p class="text-center animated slideInLeft delay-1s">Realizamos el proceso de “cremación” , <br> Mediante un proceso químico llamado bioreducción por hidrolisis alcalina, <br>te certificamos este proceso</p>
+                    <div class="centrar mt-4">
+                      <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar animated slideInUp">¡Contrata Ahora!</button></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 h-100" src="img/recordatorioTraslado.jpg" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block bgNegroTrasparencia">
+                    <h2 class="animated slideInUp">Traslado de Tu Mascota</h2>
+                    <p class="text-center animated slideInLeft delay-1s">Trasladamos el cuerpo de tu mascota desde el sitio del fallecimiento,<br> hasta su destino final</p>
+                    <div class="centrar mt-4">
+                      <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar animated slideInUp">¡Contrata Ahora!</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+
+        
+              <!-- Pie de Pagina -->
+              <div class="container-fluid">
+                <div class="row bgPie">
+                  <div class="col-lg-4 col-sm-12">
+                      <div class="imgPie">
+                      <img src="img/logoOSF.png" alt="">
+                    </div>
+                        <nav class="nav ">
+                          <ul>
+                            <a href="" class="texto-blanco"><li class="texto-blanco fuenteSecundaria ">Empresa</li></a>
+                            <a href=""><li class="texto-blanco fuenteSecundaria ">Servicios</li></a>
+                            <li class="texto-blanco fuenteSecundaria ">Contacto</li>
+                          </ul>
+                        </nav>
+                        <br>
+                  </div>
+                  <div class="col-lg-4 col-sm-12">
+
+                      <nav class="nav2">
+       
+                        <ul>
+                          <p class="fuenteSecundaria texto-blanco em2 mt-2 text-center">Contáctanos</p>
+                          <li class="texto-blanco"><i class="fas fa-map-marker-alt"></i> Oficina Principal:<br>
+                            Tunja, Cra 12 # 20-97</li>
+                          <li class="texto-blanco"><i class="fas fa-mobile-alt"></i> +57(8) 7422078 <br>+57 320 304 4705
+                          </li>
+                          <li class="texto-blanco"><i class="fas fa-at"></i> info@osf.com.co
+                          </li>
+                          <li class="texto-blanco"><i class="fas fa-route"></i> Nuestras Sedes </li> 
+                        </ul>
+                      </nav>
+                  </div>
+                  <div class="col-lg-4 col-sm-12">
+                      <p class="fuenteSecundaria texto-blanco em2 mt-2 text-center">Redes Sociales</p>
+                      <div class="nav">
+                        <ul>
+                          <a href="https://www.facebook.com/OrgSanFrancisco"><li><i class="fab fa-facebook"></i> facebook.com/OrgSanFrancisco</li></a>
+                          <a href="https://www.twitter.com/OrgSanFrancisco"><li><i class="fab fa-twitter"></i>  twitter.com/OrgSanFrancisco</li></a>
+                          <a href="https://www.instagram.com/orgsanfrancisco"><li><i class="fab fa-instagram"></i> instagram.com/orgsanfrancisco</li></a>
+                          <a href="https://www.youtube.com/channel/UCyoRI7F98n7kXOWlivw2VrA"><li><i class="fab fa-youtube"></i> Youtube.com/orgsanfrancisco</li></a>
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+                <div class="row bgPie">
+                  <div class="col-lg-12 col-sm-12">
+                      <p class="text-center texto-blanco c mt-2"> Organización San Francisco / Power By Direccion De Sistemas 2020</p>
+                  </div>
+                </div>
+              </div>
+
+
+            <script src="js/lib/jquery.js"></script>
+            <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script src="lib/bootstrap/js/dist/carousel.js"></script>
+            <script src="js/app.js"></script>
+            <script src="js/validacion_formularios.js"></script>
+            <script src="lib/bootstrap/js/dist/tooltip.js"></script>
+            <script src="js/lib/anijs.js"></script>
+
+
+</body>
+</html>

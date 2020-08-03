@@ -1,0 +1,104 @@
+@font-face{
+  font-family: fuentePrincipal;
+  src: url("../fonts/SweetCupcakealtdemo.ttf");
+}
+@font-face{
+  font-family: fuenteSecundaria;
+  src: url("../fonts/HelveticaMediumCondensedPlain.otf");
+}
+*{
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+}
+.contenedorPrincipal{
+  width: 100%;
+  display: flex;
+}
+
+.fondoLateral{
+  background: url("../img/headerFormularioContrato.png");
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 100vh;
+}
+.contenedorFormulario{
+  background: url("../img/fondoHonras.png");
+  width: 60%;
+  height: 100vh;
+}
+
+.formDatotosContratante{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin-left: 30%;
+  position: relative;
+}
+#divDocumento, .divDireccion{
+  display: flex;
+
+}
+#divDocumento input, .divDireccion input, .divDireccion select{
+  width: 100%;
+}
+.ancho100{
+  width: 100%;
+}
+input, select{
+  height: 42px;
+}
+input[type = text], input[type = number],input[type = email], select{
+  border: 1px solid #7dc623;
+  color: #426fb2;
+  transition: .5s;
+  font-family: fuenteSecundaria;
+  font-size: 19px;
+  border-radius: 5px;
+}
+div span{
+  font-size: 20px;
+}
+input[type = text]:focus, input[type = number]:focus, input[type = email]:focus, select:focus{
+  border-color: #426fb2;
+  color: #426fb2;
+}
+.sobraError{
+  -webkit-box-shadow: -1px 0px 6px 0px #dc3545;
+  -moz-box-shadow: -1px 0px 6px 0px #dc3545;
+  box-shadow: -1px 0px 6px 0px #dc3545;
+}
+
+#customFile .custom-file-control:lang(en)::after {
+  content: "Click me";
+}
+.formDatotosContratante section{
+  position: absolute;
+}
+.botones{
+  display: flex;
+  justify-content: space-around;
+}
+.btn:hover{
+  color: #fff;
+}
+.ayuda{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.ayuda input{
+  position: relative;
+}
+.ayuda i{
+  position: absolute;
+  height: 42px;
+  right: 2px;
+  bottom: -5px;
+  font-size: 2em;
+  cursor: pointer;
+  color: #426fb2;
+}
