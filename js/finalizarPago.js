@@ -31,7 +31,7 @@ $(document).ready(function(){
   
             //Atributos opcionales
  
-            acepted: "http://localhost/huellitas-de-vida/vistas/transaccionAceptada.php",
+            acepted: "http://localhos/huellitas-de-vida/vistas/transaccionAceptada.php",
   
             //Atributos cliente
             name_billing: nombreTitular,
@@ -50,10 +50,23 @@ $(document).ready(function(){
 
     $("#finalizar").on("click", function(){ 
         cargarDatos();
-        
-        console.log(data);
 
-        handler.open(data);
+        var idContratos = $("#idContrato").val();
+        alert(idContratos);
+        $.ajax({
+            type: "POST",
+            url: "../servidor/controlador/controlador_a_fecha_inicio.php",
+            data: "idContrato="+idContratos,
+            success: function(res){
+                if(res == 1){
+                    handler.open(data);
+                }else{
+                    console.log(res);
+                }
+            }
+
+        })
+
     })
 
 })

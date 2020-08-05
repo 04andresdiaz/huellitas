@@ -5,6 +5,7 @@
     session_start();
     $idPlan = $_SESSION['idPlan'];
     $idTitular = $_SESSION["idTabTitular"];
+    $idContrato = $_SESSION["id"];
 
     $obj = new datos();
     $obj->consultaMascotas($idPlan);
@@ -29,7 +30,7 @@
   <link rel="stylesheet" href="../css/estilos.css">
   <script src="../js/lib/jquery.js"></script>
   <script type="text/javascript" src="https://checkout.epayco.co/checkout.js">   </script>
-  <title>Realizar Pago Huellitas De Vida</title>
+  <title>Realizar Pago / Huellitas De Vida</title>
 
 </head>
 <body>
@@ -42,7 +43,7 @@
           <div class="formulario">
             <br>
             <p class="text-center texto-azul fuenteSecundaria">Datos Del Plan Que Estas Contratando</p>
-            
+            <input type="text" readonly id="idContrato" class="mt-4 ancho100 text-center d-none" name="idContrato" value="<?php echo $idContrato; ?>">
             <div class="formDatotosContratante">
               <input type="text" readonly id="nombrePlan" class="mt-4 ancho100 text-center" name="nombrePlan" value="<?php echo $obj->nombre_plan; ?>">
               <input type="text" readonly id="precioPlan" class="mt-4 ancho100 text-center" name="precioPlan" value="<?php echo $obj->precio_plan; ?>">
@@ -67,10 +68,5 @@
     <script src="../lib/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="https://checkout.epayco.co/checkout.js">   </script>
     <script src="../js/finalizarPago.js"></script>
-    <script>
-      $(function () {
-        $('[data-toggle="popover"]').popover()
-      })
-    </script>
 </body>
 </html>

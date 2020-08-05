@@ -15,7 +15,7 @@
 
                 $fecha_actual = date("Y-m-d");
 
-                $objConexion = $this->conexion()->prepare("INSERT INTO datos_vocero(id_registro ,nombre_vocero, tipo_documento, numero_documento, direccion_residencia, barrio_residencia, ciudad_residencia, email_vocero, celular_vocero, fecha_registro) VALUES (:idRegistro ,:nombreVocero, :tipoDocumentoVocero,:numeroDocumentoVocero,:direccionVoceroConcatenada,:barrioVocero,:ciudadVocero,:emailVocero,:celularVocero, :fecha_registro)");
+                $objConexion = $this->conexion()->prepare("INSERT INTO datos_vocero(id_registro ,nombre_vocero, tipo_documento_v, numero_documento_v, direccion_residencia_v, barrio_residencia_V, ciudad_residencia_v, email_vocero, celular_vocero, fecha_registro_v) VALUES (:idRegistro ,:nombreVocero, :tipoDocumentoVocero,:numeroDocumentoVocero,:direccionVoceroConcatenada,:barrioVocero,:ciudadVocero,:emailVocero,:celularVocero, :fecha_registro)");
             
             $objConexion->execute(['idRegistro' => $idTitular,'nombreVocero' => $nombreVocero, 'tipoDocumentoVocero' => $tipoDocumentoVocero,'numeroDocumentoVocero' => $numeroDocumentoVocero,'direccionVoceroConcatenada' => $direccionVoceroConcatenada,'ciudadVocero' => $ciudadVocero,'barrioVocero' => $barrioVocero,'emailVocero' => $emailVocero,'celularVocero' => $celularVocero, "fecha_registro" => $fecha_actual]);
 

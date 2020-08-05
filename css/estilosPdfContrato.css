@@ -1,5 +1,78 @@
-.fila{
+@font-face{
+    font-family: fuentePrincipal;
+    src: url("../fonts/SweetCupcakealtdemo.ttf");
+}
+@font-face{
+    font-family: fuenteSecundaria;
+    src: url("../fonts/HelveticaMediumCondensedPlain.otf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body{
+    background: url("../img/fondoHonras.png");
+    background-attachment: fixed;
+}
+#contenedor{
+    width: 55%;
+    position: relative;
+}
+.n{
+    margin-top: 200px;
+    position: absolute;
+    width: 100%;
+}
+.celda b{
+    font-family: fuenteSecundaria;
+    letter-spacing: 1px;
+}
+.celda{
+    text-align: center;
+    font-family: 'Bebas Neue';
+
+}
+.celda label{
+    color: #426eb2;
+    font-weight: 600;
+    
+}
+img{
+    width: 70%;
+    height: 300px;
+    margin: 0;
+    margin-left: 15%;
+}
+.centrarr {
     display: flex;
-    justify-content: space-around;
-    border: 1px solid red;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.centrarr p{
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    font-family: fuenteSecundaria;
+    color: #7dc623;
+
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+.bgVerde{
+    background: #426eb2;  
+}
+.texto-blanco{
+    color: #fff;
+}
+.active:hover{
+    -webkit-box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.75);
+}
+button{
+    border: none;
+    height: 32px;
+    transition: .5s all;
+    border-radius: 5px;
 }
