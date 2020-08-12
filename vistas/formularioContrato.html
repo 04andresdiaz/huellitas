@@ -20,8 +20,20 @@
 
 </head>
 <body>
+  <div class="modal fade bd-example-modal-lg" id="clausulado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        ...
+      </div>
+    </div>
+  </div>
 
 
+  <script>
+      $( document ).ready(function() {
+        $('#clausulado').modal('toggle')
+      });
+  </script>
     <div class="contenedorPrincipal">
       <div class="fondoLateral"></div>
       <div class="contenedorFormulario">
@@ -386,7 +398,6 @@
         <div id="div"></div>
       </div>
     <script src="../js/lib/jquery.js"></script>
-    <script src="../lib/bootstrap/js/src/popper.min.js"></script>
     <script src="../lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../js/lib/validate.min.js"></script>
     <script src="../js/validar_formulario_contrato.js"></script>

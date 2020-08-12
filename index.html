@@ -13,16 +13,21 @@
       <link rel="stylesheet" href="css/animate.css">
       <link rel="stylesheet" href="css/estilos.css">
       <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+      <link rel="stylesheet" href="lib/materialize/css/">
      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
      <!-- Start of  Zendesk Widget script -->
       <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=fe1ddb45-c7f9-461b-b394-412fa278472f"> </script>
-<!-- End of  Zendesk Widget script -->
       <!----------------------->
-
       <script src="js/lib/scroll-efecto.js"></script>
-      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
     <title>Inicio / Huellitas de Vida</title>
+
+    <style>
+
+      .a{
+        height: 1000px;
+      }
+    </style>
 </head>
 <body>
 
@@ -50,15 +55,15 @@
           <div class="formulario formularioLllamame mt-1">
             <p class="text-center fuentePrimaria llamameTitulo texto-verde mt-3">¡Llamame Gratis!</p>
             <div class="form__group field" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-              <input type="input" class="form__field texto-blanco borde-buttom" placeholder="Nombre" name="nombre" id='nombre'/>
-              <label for="nombre" class="form__label texto-blanco">Nombre y Apellido</label>
+              <input type="input" class="form__field texto-azul borde-buttom" placeholder="Nombre" name="nombre" id='nombre'/>
+              <label for="nombre" class="form__label texto-azul">Nombre y Apellido</label>
             </div>
             <div class="form__group field">
-              <input type="number" class="form__field texto-blanco borde-buttom" placeholder="Celular" name="celular" id='celular'/>
-              <label for="celular" class="form__label texto-blanco">Numero De Celular</label>
+              <input type="number" class="form__field texto-azul borde-buttom" placeholder="Celular" name="celular" id='celular'/>
+              <label for="celular" class="form__label texto-azul">Numero De Celular</label>
             </div>
             <div class="form__group field">
-              <select name="tipo_plan" id="tipo_plan" class="form__field">
+              <select name="tipo_plan" id="tipo_plan" class="form__field texto-azul">
                 <optgroup label="Te Interesa">
                   <option value="1">Plan Huellitas Memoria</option>
                   <option value="2">Plan Huellitas Despedida</option>
@@ -167,12 +172,10 @@
 
            <!-- Sello de Garantia -->
 
-              <div class="container-fluid sello"  id="nosotros">
-                <div class="row ">
-
-                  <div class="col-lg-5 col-md-6 col-sm-12 bgAzul">
-                    <div class="bgAzul">
-                    <p class="text-center texto-verde fuenteSecundaria mt-5 em2">Nuestro Sello de Garantia</p>
+              <div class="sello fondoSello"  id="nosotros">
+                 <div class="bgAzul descripcionSello">
+                    <div class="bgAzul interior">
+                    <p class="tituloSello texto-verde fuenteSecundaria mt-5 em2">Nuestro Sello de Garantia</p>
                     <div class="centrar imgSello">
                       <div class="img animated flipInX">
                       <img src="img/iconos/iconoSelloDeCalidad.png"  alt="Sello de Calida 
@@ -180,73 +183,48 @@
                        </div>
                       <br>
                     </div>
-                    <p class="text-center mt-5 texto-blanco">Uno de los mayores compromisos de Huellitas De Vida es mantener los más altos estándares de servicios y calidad. Los que siempre estarán a la vanguardia y amigable con el medio ambiente. <br>Es por lo anterior, que Huellitas de Vida, ha desarrollado un servicio integral, para brindar acompañamiento en los momentos de perdida de una Mascota.</p>
+                    <p class="text-center mt-5 texto-blanco textoDescripcion">Uno de los mayores compromisos de Huellitas De Vida es mantener los más altos estándares de servicios y calidad. Los que siempre estarán a la vanguardia y amigable con el medio ambiente. <br>Es por lo anterior, que Huellitas de Vida, ha desarrollado un servicio integral, para brindar acompañamiento en los momentos de perdida de una Mascota.</p>
                     <div class="centrar mt-4">
                       <a href="vistas/formularioContrato.html"><button class="texto-azul active fuenteSecundaria btnContaratar" data-toggle="tooltip" data-placement="top" title="Tooltip on top">¡Contrata Ahora!</button></a>
                     </div>
                     <br>
                   </div>
                   </div>
-                  <div class="col-lg-7 col-md-6 col-sm-12">
-                    <div class="fondoSello">
-                      
-                    </div>
-                  </div>
-                </div>
               </div>
            <!-- fin Sello de Garantia -->
 
 
-                <!-- formulario de Contacto y Metodos de Recaudo -->
-
-                       <div class="contactenos" id="contactenos">
-                        <div class="fondoContacto">
-                            <div class="tiposdePago">
-                              <p class="text-center em2 texto-blanco">Recuerda Nustros Metodos de Pago</p>
-                              <div class="centrar">
-                              <img src="img/epayco_pago_seguro_gray.png" alt="">
-        
-                            </div>
-                            <div class="centrar mt-4">
-                              <button class="texto-blanco active fuenteSecundaria btnContaratar bgAzul">Realizar Tu Pago</button>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="formularioContacto">
-                          <p class="text-center fuenteSecundaria texto-verde mt-5 em3">Contactenos</p>
-                          <div class="formulario">
-                            <div class="form__group field">
-                              <input type="input" class="form__field texto-blanco borde-buttom" placeholder="Nombre" name="nombre_contacto" id='nombre_contacto' />
-                              <label for="nombre_contacto" class="form__label texto-blanco">Nombre y Apellido</label>
-                            </div>
-                            <div class="form__group field">
-                              <input type="number" class="form__field texto-blanco borde-buttom" placeholder="Celular" name="celular_contacto" id='celular_contacto' required />
-                              <label for="celular_contacto" class="form__label texto-blanco">Numero De Celular</label>
-                            </div>
-                            <div class="form__group field">
-                              <input type="email" class="form__field texto-blanco borde-buttom" placeholder="Email" name="email_contacto" id='email_contacto' required />
-                              <label for="email_contacto" class="form__label texto-blanco">Correo Electronico</label>
-                            </div>
-                            <div class="form__group field">
-                              <textarea name="mensaje_contacto" class="form__field texto-blanco borde-buttom" id="mensaje_contacto" cols="10" rows="5"></textarea>
-                              <label for="mensaje_contacto" class="form__label texto-blanco">Tu Mensaje Para Nosotros</label>
-                            </div>
-                                <label class="container mt-3 texto-azul">Acepta Terminos Y Condiciones
-                                  <input type="checkbox" checked="checked">
-                                  <span class="checkmark checkb"></span>
-                                </label>
-                                <div class="mensajes" id="mensajesContacto"></div>  
-                                <div class="centrar mt-4">
-                                  <button class="texto-blanco active fuenteSecundaria btnContaratar bgAzul" id="btnContacto">Enviar Mensaje</button>
-                                </div>
-                              <br>
-                          </div>
-                        </div>
-                      </div>
-                        
+           <!--Metodos De Recaudo-->
 
 
-           <!-- Honras Funebres 
+           <div class="container mt-5">
+            <div class="row">
+              <h1 class="fuenteSecundaria texto-azul"> Metodos De Recaudo</h1>
+            </div>
+           </div>
+
+           <div class="container s mt-5">
+            <div class="row mt-5">
+              <div class="col-lg-3 cRecaudo">
+                <img src="img/iconos/iconoDavivienda.png" alt="">
+              </div>
+              <div class="col-lg-3 cRecaudo">
+                <img src="img/iconos/iconoBancoAgrario.png" alt="">
+              </div>
+              <div class="col-lg-3 cRecaudo">
+                <img src="img/iconos/iconoBaloto.png" alt="">
+              </div>
+              <div class="col-lg-3 cRecaudo">
+                <img src="img/iconos/iconoJer.png" alt="">
+              </div>
+            </div>
+           </div>
+
+
+
+           <!-- fin Metodos De Recaudo -->
+
+                      <!-- Honras Funebres 
 
               <div class="container-fluid">
                 <p class="texto-verde em2 mt-5 text-center fuenteSecundaria">Honras Funebres Para Tú Mascota</p>
@@ -327,7 +305,7 @@
 
             fin Honras Funebres -->
 
-            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -407,8 +385,41 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
+                <!-- formulario de Contacto y Metodos de Recaudo -->
 
-
+                       <div class="contactenos" id="contactenos">
+                        <div class="formularioContacto">
+                          <p class="text-center fuenteSecundaria texto-verde mt-5 em3">Contáctanos</p>
+                          <div class="formulario">
+                            <div class="form__group field">
+                              <input type="input" class="form__field texto-blanco borde-buttom" placeholder="Nombre" name="nombre_contacto" id='nombre_contacto' />
+                              <label for="nombre_contacto" class="form__label texto-blanco">Nombre y Apellido</label>
+                            </div>
+                            <div class="form__group field">
+                              <input type="number" class="form__field texto-blanco borde-buttom" placeholder="Celular" name="celular_contacto" id='celular_contacto' required />
+                              <label for="celular_contacto" class="form__label texto-blanco">Numero De Celular</label>
+                            </div>
+                            <div class="form__group field">
+                              <input type="email" class="form__field texto-blanco borde-buttom" placeholder="Email" name="email_contacto" id='email_contacto' required />
+                              <label for="email_contacto" class="form__label texto-blanco">Correo Electronico</label>
+                            </div>
+                            <div class="form__group field">
+                              <textarea name="mensaje_contacto" class="form__field texto-blanco borde-buttom" id="mensaje_contacto" cols="10" rows="5"></textarea>
+                              <label for="mensaje_contacto" class="form__label texto-blanco">Tu Mensaje Para Nosotros</label>
+                            </div>
+                                <label class="container mt-3 texto-blanco">Acepta Terminos Y Condiciones
+                                  <input type="checkbox" checked="checked">
+                                  <span class="checkmark checkb"></span>
+                                </label>
+                                <div class="mensajes" id="mensajesContacto"></div>  
+                                <div class="centrar mt-4">
+                                  <button class="texto-blanco active fuenteSecundaria btnContaratar bgAzul" id="btnContacto">Enviar Mensaje</button>
+                                </div>
+                              <br>
+                          </div>
+                        </div>
+                      </div>
+                        
         
               <!-- Pie de Pagina -->
               <div class="container-fluid">
@@ -460,7 +471,6 @@
                   </div>
                 </div>
               </div>
-
 
             <script src="js/lib/jquery.js"></script>
             <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -26,12 +26,13 @@ $(document).ready(function(){
             lang: "es",
   
             //Onpage="false" - Standard="true"
-            external: "true",
-
+            external: "false",
   
             //Atributos opcionales
  
-            acepted: "http://localhos/huellitas-de-vida/vistas/transaccionAceptada.php",
+            acepted: "http://osf.com.co/huellitas/vistas/transaccionAceptada.php",
+            rejected: "http://osf.com.co/huellitas/servidor/deleteSession.php",
+            pending: "http://osf.com.co/huellitas/vistas/deleteSession.php",
   
             //Atributos cliente
             name_billing: nombreTitular,
@@ -50,7 +51,7 @@ $(document).ready(function(){
 
     $("#finalizar").on("click", function(){ 
         cargarDatos();
-
+        $("#finalizar").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
         var idContratos = $("#idContrato").val();
         alert(idContratos);
         $.ajax({

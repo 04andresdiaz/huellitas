@@ -71,6 +71,7 @@ $(document).ready(function(){
                 }else{
                          $("#mensajesContacto").html("<img src='img/cargando.gif' alt='loading' />")
                         $.ajax({
+                                
                                 type: "POST",
                                 url: "servidor/controlador/contacto_controlador.php",
                                 data: "nombre_contacto="+nombre_contacto+"&celular_contacto="+celular_contacto+"&email_contacto="+email_contacto+"&mensaje_contacto="+mensaje_contacto,

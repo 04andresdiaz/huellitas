@@ -2,6 +2,9 @@ $(document).ready(function(){
 
   function cargarDatos(){
 
+
+            validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+
             nombreSeccionUno = $("#nombreSeccionUno").val(),
             cedulaSeccionUno = $("#cedulaSeccionUno").val(),
             fechaDeNacimiento = $("#fechaDeNacimiento").val(),
@@ -55,7 +58,7 @@ $(document).ready(function(){
             razaMascota = $("#razaMascota").val(),
             edadMascota = document.getElementById("edadMascota").value;
 
-            return nombreSeccionUno , cedulaSeccionUno,
+            return validacion_email,  nombreSeccionUno , cedulaSeccionUno,
             fechaDeNacimiento, direccionSeccionUno,valorUnoDireccion,
             valorDosDireccion, ubicacionDireccionSeccionuno,ciudadSeccionUno,
             barrioSeccionUno,celularSeccionUno,tipoDocumentoSeccionUno,
@@ -92,10 +95,14 @@ $(document).ready(function(){
             }else if (emailTitular == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#emailTitular").focus().addClass("sobraError border border-danger");
+            }else if (!validacion_email.test(emailTitular)){
+                $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Revisa el campo Email debe incluir @");
+                $("#emailTitular").focus().addClass("sobraError border border-danger");
             }else if (celularSeccionUno == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#celularSeccionUno").focus().addClass("sobraError border border-danger");
             } else{
+                 $("#siguienteSeccionUno").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
                 var datos = $("#form");
                   $.ajax({
                     type: "POST",
@@ -123,6 +130,7 @@ $(document).ready(function(){
         })
 
         $("#siguienteSeccionDos").on("click", function(){
+            $("#siguienteSeccionDos").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
             cargarDatos();
             console.log(cedulaSeccionUno);
             var datosFormDos = $("#formSeccionDos");
@@ -152,7 +160,7 @@ $(document).ready(function(){
         })
 
         $("#siguienteSeccionTres").on("click", function(){
-
+            $("#siguienteSeccionTres").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
             var cedulaTitular = cedulaSeccionUno;
             var datos = $("#formSeccionTres");
             $.ajax({
@@ -219,11 +227,16 @@ $(document).ready(function(){
             }else if (emailVocero == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#emailVocero").focus().addClass("sobraError border border-danger");
+           }else if (!validacion_email.test(emailTitular)){
+                $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
+                $("#emailVocero").focus().addClass("sobraError border border-danger");
             }else if(celularVocero == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#celularVocero").focus().addClass("sobraError border border-danger");
             }
             else{
+                
+            $("#siguienteSeccionCuatro").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
                
                 $.ajax({
                     type: "POST",
@@ -259,6 +272,7 @@ $(document).ready(function(){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#edadMascota").focus().addClass("sobraError border border-danger");
             }else{
+            $("#vistaPrevia").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
                 
                 var datos = new FormData();
                 e.preventDefault();
