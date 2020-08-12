@@ -232,7 +232,7 @@
             var doc = new jsPDF('p', 'mm', 'legal'); //210mm wide and 297mm high
             
             doc.addImage(imgData, 'PNG', 10, 1);
-            doc.save('Contrato.pdf');
+            doc.save('sample.pdf');
 
             location.href="../servidor/deleteSession.php";
         }

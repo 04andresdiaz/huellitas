@@ -1,0 +1,46 @@
+[05-Aug-2020 19:42:53 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php:16
+Stack trace:
+#0 /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php(25): datos->getDatos('Maria Isabel Di...', 'CC', '23521408', '1957-07-01', 'Cl 7 B # 19 - 2...', 'Tunja', 'Escandinavo', 'mariachava@gmai...', '31125037062')
+#1 {main}
+  thrown in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php on line 16
+[05-Aug-2020 19:43:04 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php:16
+Stack trace:
+#0 /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php(25): datos->getDatos('Maria Isabel Di...', 'CC', '23521408', '1957-07-01', 'Cl 7 B # 19 - 2...', 'Tunja', 'Escandinavo', 'mariachava@gmai...', '31125037062')
+#1 {main}
+  thrown in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php on line 16
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: nombreSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 5
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: tipoDocumentoSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 6
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: cedulaSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 7
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: fechaDeNacimiento in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 8
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: direccionSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 10
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: valorUnoDireccion in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 11
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: direccionLetrasSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 12
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: valorDosDireccion in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 13
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: ubicacionDireccionSeccionuno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 14
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: ciudadSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 18
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: barrioSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 19
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: emailTitular in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 20
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Notice:  Undefined index: celularSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 21
+[05-Aug-2020 19:43:19 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php:16
+Stack trace:
+#0 /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php(25): datos->getDatos(NULL, NULL, NULL, NULL, '   #  ', NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php on line 16
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: nombreSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 5
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: tipoDocumentoSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 6
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: cedulaSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 7
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: fechaDeNacimiento in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 8
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: direccionSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 10
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: valorUnoDireccion in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 11
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: direccionLetrasSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 12
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: valorDosDireccion in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 13
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: ubicacionDireccionSeccionuno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 14
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: ciudadSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 18
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: barrioSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 19
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: emailTitular in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 20
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Notice:  Undefined index: celularSeccionUno in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php on line 21
+[05-Aug-2020 19:43:32 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php:16
+Stack trace:
+#0 /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/controlador/controlador_datos_seccion_uno.php(25): datos->getDatos(NULL, NULL, NULL, NULL, '   #  ', NULL, NULL, NULL, NULL)
+#1 {main}
+  thrown in /home2/osfcomco/public_html/osf.com.co/huellitas/servidor/modelo/modelo_datos_seccion_uno.php on line 16

@@ -24,30 +24,6 @@
     <div id="modal">
 
     </div>
-    <script>
-
-      $(document).ready(function(){
-        function llamar(){
-
-          $.ajax({
-            url: "clausulado.html",
-            success: function(res){
-              $("#modal").html(res);
-            }
-          })
-
-        }
-
-        llamar();
-        
-       $("#terminos").on("click", function(){
-        llamar();
-        })
-      })
-
-      
-
-    </script>
     <div class="contenedorPrincipal">
       <div class="fondoLateral"></div>
       <div class="contenedorFormulario">
@@ -425,6 +401,24 @@
         $('[data-toggle="popover"]').popover()
       })
     </script>
+
+<script>
+
+ 
+
+    function llamar(){
+      $("#modal").load("clausulado.html", function(){
+        $('#clausulado').modal(toogle);
+      })
+    }
+
+    llamar();
+    
+    $("#terminos").on("click", function(){
+    llamar();
+    })
+
+</script>
 
 </body>
 </html>
