@@ -255,7 +255,14 @@ $(document).ready(function(){
 
         });
 
-        
+        $("#checkbox").on("change", function(){
+            if( $(this).is(':checked') ){
+                document.getElementById("vistaPrevia").disabled = false;
+            }else{
+                document.getElementById("vistaPrevia").disabled = true;
+            }
+        })
+
         $("#vistaPrevia").on("click", function(e){
             cargarDatos();
             
@@ -313,5 +320,6 @@ $(document).ready(function(){
                     $("#mensajesContacto").fadeOut().removeClass("mensajesAparece bg-danger text-white");
             }
         })
+
 });
 

@@ -450,6 +450,20 @@ a{
     height: 0;
     width: 0;
   }
+
+  .aceptar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .aceptar input{
+      height: 42px;
+  }
+  .aceptar a{
+      font-size: 1.2em;
+      margin-left: 2px;
+  }
+
   
   /* Create a custom checkbox */
   .checkmark {

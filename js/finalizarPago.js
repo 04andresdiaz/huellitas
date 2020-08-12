@@ -30,9 +30,9 @@ $(document).ready(function(){
   
             //Atributos opcionales
  
-            acepted: "http://osf.com.co/huellitas/vistas/transaccionAceptada.php",
-            rejected: "http://osf.com.co/huellitas/servidor/deleteSession.php",
-            pending: "http://osf.com.co/huellitas/vistas/deleteSession.php",
+            acepted: "http://localhost/huellitas/vistas/transaccionAceptada.php",
+            rejected: "http://localhost/huellitas/servidor/deleteSession.php",
+            pending: "http://localhost/huellitas/vistas/deleteSession.php",
   
             //Atributos cliente
             name_billing: nombreTitular,

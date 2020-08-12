@@ -20,20 +20,34 @@
 
 </head>
 <body>
-  <div class="modal fade bd-example-modal-lg" id="clausulado" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        ...
-      </div>
+
+    <div id="modal">
+
     </div>
-  </div>
+    <script>
 
+      $(document).ready(function(){
+        function llamar(){
 
-  <script>
-      $( document ).ready(function() {
-        $('#clausulado').modal('toggle')
-      });
-  </script>
+          $.ajax({
+            url: "clausulado.html",
+            success: function(res){
+              $("#modal").html(res);
+            }
+          })
+
+        }
+
+        llamar();
+        
+       $("#terminos").on("click", function(){
+        llamar();
+        })
+      })
+
+      
+
+    </script>
     <div class="contenedorPrincipal">
       <div class="fondoLateral"></div>
       <div class="contenedorFormulario">
@@ -386,8 +400,12 @@
                     <input type="file" class="custom-file-input" id="fotoMascota" lang="de">
                     <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                   </div>
+                  <div class="aceptar">
+                    <input type="checkbox" id="checkbox">
+                    <a href="#" id="terminos">Acepta los terminos y condiciones</a>
+                  </div>
                   <div class="botones mt-4">
-                    <p class="texto-blanco fuenteSecundaria btn bgAzul active" id="vistaPrevia">Iniciar Contrato</p>
+                    <button class="texto-blanco fuenteSecundaria btn bgAzul active" id="vistaPrevia" disabled >Iniciar Contrato</button>
                   </div>
                 </form>
             </section>
@@ -399,6 +417,7 @@
       </div>
     <script src="../js/lib/jquery.js"></script>
     <script src="../lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../lib/bootstrap/js/dist/tooltip.js"></script>
     <script src="../js/lib/validate.min.js"></script>
     <script src="../js/validar_formulario_contrato.js"></script>
     <script>
@@ -406,5 +425,6 @@
         $('[data-toggle="popover"]').popover()
       })
     </script>
+
 </body>
 </html>
