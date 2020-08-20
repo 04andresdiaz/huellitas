@@ -4,7 +4,7 @@
 
     class datos extends DB{
 
-        function getDatos($periodicidadPago, $lugarDePago,$contratoDeligado, $plan){
+        function getDatos($periodicidadPago, $contratoDeligado, $plan){
 
             try {
 
@@ -16,9 +16,9 @@
                 
                 $fecha_actual = date("Y-m-d");
 
-                $objConexion = $this->conexion()->prepare("INSERT INTO periodicidad_de_pago(id_registro , periodicidad, lugar_cobro, contrato_deligado, id_plan, fecha_registro) VALUES (:idRegistro , :periodicidadPago, :lugarDePago, :contratoDeligado, :plan, :fecha_registro)");
+                $objConexion = $this->conexion()->prepare("INSERT INTO periodicidad_de_pago(id_registro , periodicidad, contrato_deligado, id_plan, fecha_registro) VALUES (:idRegistro , :periodicidadPago, :contratoDeligado, :plan, :fecha_registro)");
 
-                $objConexion->execute(['idRegistro' => $idTitular ,'periodicidadPago' => $periodicidadPago, 'lugarDePago' => $lugarDePago, 'contratoDeligado' => $contratoDeligado, 'plan' => $plan, 'fecha_registro' => $fecha_actual ]);
+                $objConexion->execute(['idRegistro' => $idTitular ,'periodicidadPago' => $periodicidadPago, 'contratoDeligado' => $contratoDeligado, 'plan' => $plan, 'fecha_registro' => $fecha_actual ]);
                 
                 if($objConexion == true){
 

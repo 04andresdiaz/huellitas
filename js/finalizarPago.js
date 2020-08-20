@@ -53,7 +53,7 @@ $(document).ready(function(){
         cargarDatos();
         $("#finalizar").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
         var idContratos = $("#idContrato").val();
-        alert(idContratos);
+    
         $.ajax({
             type: "POST",
             url: "../servidor/controlador/controlador_a_fecha_inicio.php",

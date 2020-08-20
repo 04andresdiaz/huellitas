@@ -4,7 +4,7 @@
 
     class datos extends DB{
 
-        function getDatos($direccionTrabajoConcatenada,$ciudadTrabajo,$barrioTrabajo,$celularTrabajo, $nombreEmpresa,$email){
+        function getDatos($direccionTrabajoConcatenada,$departamentoTrabajo,$ciudadTrabajo,$barrioTrabajo,$celularTrabajo, $nombreEmpresa,$email){
 
             try {
 
@@ -15,9 +15,9 @@
 
                 $fechaActual = date("Y-m-d");
 
-                $objConexion = $this->conexion()->prepare("INSERT INTO datos_trabajo(id_registro , direccion_trabajo, ciudad_trabajo , barrio_trabajo, telefono_trabajo, nombre_empresa, email_trabajo, fecha_registro) VALUES (:idTitular, :direccionTrabajoConcatenada, :ciudadTrabajo, :barrioTrabajo, :celularTrabajo,  :nombreEmpresa, :email, :fecha_registro)");
+                $objConexion = $this->conexion()->prepare("INSERT INTO datos_trabajo(id_registro , direccion_trabajo, departamento_trabajo, ciudad_trabajo , barrio_trabajo, telefono_trabajo, nombre_empresa, email_trabajo, fecha_registro) VALUES (:idTitular, :direccionTrabajoConcatenada, :departamentoTrabajo ,:ciudadTrabajo, :barrioTrabajo, :celularTrabajo,  :nombreEmpresa, :email, :fecha_registro)");
 
-                $objConexion->execute(['idTitular' => $idTitular,'direccionTrabajoConcatenada' => $direccionTrabajoConcatenada, 'ciudadTrabajo' => $ciudadTrabajo,'barrioTrabajo' => $barrioTrabajo,'celularTrabajo' => $celularTrabajo,'nombreEmpresa' => $nombreEmpresa,'email' => $email, "fecha_registro" => $fechaActual]);
+                $objConexion->execute(['idTitular' => $idTitular,'direccionTrabajoConcatenada' => $direccionTrabajoConcatenada, 'departamentoTrabajo' => $departamentoTrabajo ,'ciudadTrabajo' => $ciudadTrabajo,'barrioTrabajo' => $barrioTrabajo,'celularTrabajo' => $celularTrabajo,'nombreEmpresa' => $nombreEmpresa,'email' => $email, "fecha_registro" => $fechaActual]);
     
                 if ($objConexion == true){
                     

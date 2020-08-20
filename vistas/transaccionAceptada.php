@@ -222,7 +222,7 @@
         <script>
     $(document).ready(function(){
 
-//pdf 다운로드 	
+
     $("#pdfDownloader").click(function(){
 
     html2canvas(document.getElementById("contenedor"), {
@@ -232,9 +232,12 @@
             var doc = new jsPDF('p', 'mm', 'legal'); //210mm wide and 297mm high
             
             doc.addImage(imgData, 'PNG', 10, 1);
-            doc.save('sample.pdf');
 
-            location.href="../servidor/deleteSession.php";
+            doc.addPage(imgData, 'PNG', 10, 1);
+            doc.addImage(imgData, 'PNG', 10, 1);
+            doc.save('sample.pdf');
+            
+            //location.href="../servidor/deleteSession.php";
         }
         
     });

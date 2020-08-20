@@ -363,19 +363,21 @@ a{
 }
 
 .formularioContacto{
-    width: 65%;
+    width: 100%;
     background: #e96443;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left rgba(161, 67, 168, 0.9), rgba(233, 101, 68, 0.8)),url("../img/fondoContacto.png");  
-    background: linear-gradient(to left, rgba(161, 67, 168,  0.9), rgba(114, 57, 43, 0.8)),url("../img/fondoContacto.png"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-position: center;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background: -webkit-linear-gradient(to left rgba(161, 67, 168, 842), rgba(233, 101, 68, 0.842)),url("../img/fondoContacto.png");  
+    background: linear-gradient(to left, rgba(161, 67, 168,  842), rgba(114, 57, 43, 0.842)),url("../img/fondoContacto.png"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .form__group {
     position: relative;
     padding: 15px 0 0;
     margin-top: 10px;
-    width: 45%;
-    margin-left: 30%;
+    width: 40%;
+    margin-left: 35%;
   }
   .form__field {
     font-family: inherit;
@@ -529,6 +531,11 @@ a{
     height: 100%;
   }
 
+  .movil-honras{
+    display: none!important;
+  }
+
+
 @media (max-width: 576px) {
     .portadaVideo video{
         display: none;
@@ -540,6 +547,17 @@ a{
         background-position: center;
         background-repeat: no-repeat;
     }
+    .portadaContenido p{
+        font-size: 3em;
+    }
+    .formularioLllamame{
+        width: 100%;
+        opacity: .9;
+    }
+    .form__group {
+        width: 80%;
+        margin-left: 10%;
+      }
     .fondoContacto{
         display: none;
     }
@@ -566,5 +584,14 @@ a{
     }
     .planes{
         height: auto;
+    }
+    .checkb{
+        left: 8%;
+    }
+    .movil-honras{
+        display: block!important;
+      }    
+    .slide{
+        display: none!important;
     }
   }

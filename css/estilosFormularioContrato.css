@@ -51,7 +51,7 @@
 input, select{
   height: 42px;
 }
-input[type = text], input[type = number],input[type = email], select{
+input[type = text], input[type = number],input[type = email], select, input[type = date]{
   border: 1px solid #7dc623;
   color: #426fb2;
   transition: .5s;
@@ -101,4 +101,32 @@ input[type = text]:focus, input[type = number]:focus, input[type = email]:focus,
   font-size: 2em;
   cursor: pointer;
   color: #426fb2;
+}
+/*---*/
+@media (max-width: 576px) {
+  .fondoLateral{
+   display: none;
+  }
+  .formulario{
+
+  }
+  .contenedorPrincipal{
+
+  }
+  .contenedorFormulario{
+    width: 100%;
+  }
+  .contenedorFormulario p{
+    font-size: 2em;
+  }
+  .formDatotosContratante{
+
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  form{
+    width: 100%;
+    left: 0;
+  }
 }

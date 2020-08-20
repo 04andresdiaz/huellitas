@@ -5,7 +5,7 @@
 
     class datos extends DB{
 
-        function getDatos($nombreTitular, $tipoDocumentoTitular, $cedulaTitular, $fechaDeNacimientoTitular,$direccionTitularConcatenada, $ciudadTitular, $barrioTitular,$emailTitular,$celularTitular){
+        function getDatos($nombreTitular, $tipoDocumentoTitular, $cedulaTitular, $fechaDeNacimientoTitular,$direccionTitularConcatenada, $departamentoSeccionUno ,$ciudadTitular, $barrioTitular,$emailTitular,$celularTitular){
 
             $fechaActual = date("Y-m-d");
 
@@ -13,10 +13,10 @@
                 /*
                 *Inserto Los Datos Iniciales Del Titular
                 */
-                $objConexion = $this->conexion()->prepare("INSERT INTO datos_titular(nombre_titular, tipo_documento, numero_documento, fecha_nacimiento, direccion_residencia, barrio_residencia, ciudad_residencia, email, celular, fecha_registro) VALUES 
-                (:nombreTitular, :tipoDocumentoTitular,:cedulaTitular,:fechaDeNacimientoTitular,:direccionTitularConcatenada,:ciudadTitular,:barrioTitular,:email ,:celularTitular, :fecha_registro)");
+                $objConexion = $this->conexion()->prepare("INSERT INTO datos_titular(nombre_titular, tipo_documento, numero_documento, fecha_nacimiento, direccion_residencia, departamento_residencia,barrio_residencia,ciudad_residencia, email, celular, fecha_registro) VALUES 
+                (:nombreTitular, :tipoDocumentoTitular,:cedulaTitular,:fechaDeNacimientoTitular,:direccionTitularConcatenada, :departamentoSeccionUno ,:ciudadTitular,:barrioTitular,:email ,:celularTitular, :fecha_registro)");
     
-                $objConexion->execute(['nombreTitular' => $nombreTitular, 'tipoDocumentoTitular' => $tipoDocumentoTitular , 'cedulaTitular' => $cedulaTitular , 'fechaDeNacimientoTitular' => $fechaDeNacimientoTitular , 'direccionTitularConcatenada' => $direccionTitularConcatenada , 'ciudadTitular' => $ciudadTitular, 'barrioTitular' => $barrioTitular, 'email' => $emailTitular, 'celularTitular' => $celularTitular, "fecha_registro" => $fechaActual]);
+                $objConexion->execute(['nombreTitular' => $nombreTitular, 'tipoDocumentoTitular' => $tipoDocumentoTitular , 'cedulaTitular' => $cedulaTitular , 'fechaDeNacimientoTitular' => $fechaDeNacimientoTitular , 'direccionTitularConcatenada' => $direccionTitularConcatenada , 'departamentoSeccionUno' => $departamentoSeccionUno ,'ciudadTitular' => $ciudadTitular, 'barrioTitular' => $barrioTitular, 'email' => $emailTitular, 'celularTitular' => $celularTitular, "fecha_registro" => $fechaActual]);
     
                 if ($objConexion == true){
 

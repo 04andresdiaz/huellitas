@@ -7,13 +7,16 @@
     $nombreMascota = $_POST["nombreMascota"];
     $especieMascota = $_POST["especieMascota"];
     $razaMascota = $_POST["razaMascota"];
-    $edadMascota = $_POST["edadMascota"];
-    $pesoMascota = $_POST["pesoMascota"];
+    $edad = $_POST["edadMascota"];
+    $tipoEdad = $_POST["tipoEdad"];
+    $edadMascota = $edad." ".$tipoEdad;
+    $peso = $_POST["pesoMascota"];
+    $pesoMascota = $peso." Kg";
 
    // echo $nombreMascota, $especieMascota, $razaMascota, $edadMascota,$pesoMascota
-    $carneMascota = $_FILES['carneMascota']["name"];
+    /*$carneMascota = $_FILES['carneMascota']["name"];
     $carneNombreTemporal = $_FILES['carneMascota']["tmp_name"];
-    $extencion = substr($carneMascota, strripos($carneMascota, '.'));
+    $extencion = substr($carneMascota, strripos($carneMascota, '.'));*/
 
     $fotoMascota = $_FILES['fotoMascota']["name"];
     $fotoMascotaTemporal = $_FILES['fotoMascota']["tmp_name"];
@@ -21,9 +24,9 @@
 
     $cedulaTitular = $_POST['cedulaTitular'];
 
-    if (in_array($extencion, $formatos) && in_array($extencionMascota, $formatos)){
+    if (in_array($extencionMascota, $formatos)){
         
-        move_uploaded_file($carneNombreTemporal, "../../img/imgCarne/$carneMascota"); 
+        //move_uploaded_file($carneNombreTemporal, "../../img/imgCarne/$carneMascota"); 
 
         move_uploaded_file($fotoMascotaTemporal, "../../img/imgMascota/$fotoMascota");
 
@@ -32,6 +35,6 @@
     }
     
     $obj = new datos();
-    $obj->getDatos($nombreMascota, $especieMascota, $razaMascota, $edadMascota,$pesoMascota, $carneMascota, $fotoMascota, $cedulaTitular);
+    $obj->getDatos($nombreMascota, $especieMascota, $razaMascota, $edadMascota,$pesoMascota, $fotoMascota, $cedulaTitular);
 
 ?>

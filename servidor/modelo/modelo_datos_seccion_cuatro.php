@@ -4,7 +4,7 @@
 
     class datos extends DB{
 
-        function getDatos($nombreVocero, $tipoDocumentoVocero,$numeroDocumentoVocero, $direccionVoceroConcatenada, $ciudadVocero, $barrioVocero, $emailVocero, $celularVocero){
+        function getDatos($nombreVocero, $tipoDocumentoVocero,$numeroDocumentoVocero, $direccionVoceroConcatenada, $departamentoVocero ,$ciudadVocero, $barrioVocero, $emailVocero, $celularVocero){
 
             try {
                 
@@ -14,10 +14,10 @@
                  $idTitular = $_SESSION["idTabTitular"];
 
                 $fecha_actual = date("Y-m-d");
-
-                $objConexion = $this->conexion()->prepare("INSERT INTO datos_vocero(id_registro ,nombre_vocero, tipo_documento_v, numero_documento_v, direccion_residencia_v, barrio_residencia_V, ciudad_residencia_v, email_vocero, celular_vocero, fecha_registro_v) VALUES (:idRegistro ,:nombreVocero, :tipoDocumentoVocero,:numeroDocumentoVocero,:direccionVoceroConcatenada,:barrioVocero,:ciudadVocero,:emailVocero,:celularVocero, :fecha_registro)");
+                
+                $objConexion = $this->conexion()->prepare("INSERT INTO datos_vocero(id_registro ,nombre_vocero, tipo_documento_v, numero_documento_v, direccion_residencia_v, barrio_residencia_V, departamento_residencia_v ,ciudad_residencia_v, email_vocero, celular_vocero, fecha_registro_v) VALUES (:idRegistro ,:nombreVocero, :tipoDocumentoVocero,:numeroDocumentoVocero,:direccionVoceroConcatenada,:barrioVocero, :departamentoVocero ,:ciudadVocero,:emailVocero,:celularVocero, :fecha_registro)");
             
-            $objConexion->execute(['idRegistro' => $idTitular,'nombreVocero' => $nombreVocero, 'tipoDocumentoVocero' => $tipoDocumentoVocero,'numeroDocumentoVocero' => $numeroDocumentoVocero,'direccionVoceroConcatenada' => $direccionVoceroConcatenada,'ciudadVocero' => $ciudadVocero,'barrioVocero' => $barrioVocero,'emailVocero' => $emailVocero,'celularVocero' => $celularVocero, "fecha_registro" => $fecha_actual]);
+            $objConexion->execute(['idRegistro' => $idTitular,'nombreVocero' => $nombreVocero, 'tipoDocumentoVocero' => $tipoDocumentoVocero,'numeroDocumentoVocero' => $numeroDocumentoVocero,'direccionVoceroConcatenada' => $direccionVoceroConcatenada, 'departamentoVocero' => $departamentoVocero ,'ciudadVocero' => $ciudadVocero,'barrioVocero' => $barrioVocero,'emailVocero' => $emailVocero,'celularVocero' => $celularVocero, "fecha_registro" => $fecha_actual]);
 
                 if ($objConexion == true){
                     

@@ -15,6 +15,7 @@
 
     $direccionTitularConcatenada = $direccionTitular." ".$valorUnoDireccionTitular." ".$direccionLetrasTitular." # ".$valorDosDireccionTitular." ".$ubicacionDireccionTitular;
     //--
+    $departamentoSeccionUno = $_POST['departamentoSeccionUno'];
     $ciudadTitular = $_POST['ciudadSeccionUno'];
     $barrioTitular = $_POST['barrioSeccionUno'];
     $emailTitular = $_POST['emailTitular'];
@@ -22,7 +23,7 @@
 
     $objDatos = new datos();
     
-    $objDatos->getDatos($nombreTitular, $tipoDocumentoTitular, $cedulaTitular, $fechaDeNacimientoTitular,$direccionTitularConcatenada, $ciudadTitular, $barrioTitular,$emailTitular,$celularTitular );
+    $objDatos->getDatos($nombreTitular, $tipoDocumentoTitular, $cedulaTitular, $fechaDeNacimientoTitular,$direccionTitularConcatenada, $departamentoSeccionUno ,$ciudadTitular, $barrioTitular,$emailTitular,$celularTitular );
 
 
 

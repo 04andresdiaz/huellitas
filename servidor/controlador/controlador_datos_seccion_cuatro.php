@@ -14,6 +14,7 @@
 
     $direccionVoceroConcatenada = $direccionVocero." ".$valorUnoDireccionVocero." ".$letraDireccionVocero." # ".$valorDosDireccionVocero." ".$ubicacionDireccionVocero;
     //*
+    $departamentoVocero = $_POST['departamentoVocero'];
     $ciudadVocero = $_POST['ciudadVocero'];
     $barrioVocero = $_POST['barrioVocero'];
     $emailVocero = $_POST['emailVocero'];
@@ -21,7 +22,7 @@
 
 
     $objDatos = new datos();
-    $objDatos->getDatos($nombreVocero, $tipoDocumentoVocero,$numeroDocumentoVocero, $direccionVoceroConcatenada, $ciudadVocero, $barrioVocero, $emailVocero, $celularVocero);
+    $objDatos->getDatos($nombreVocero, $tipoDocumentoVocero,$numeroDocumentoVocero, $direccionVoceroConcatenada, $departamentoVocero ,$ciudadVocero, $barrioVocero, $emailVocero, $celularVocero);
 
 
 ?>

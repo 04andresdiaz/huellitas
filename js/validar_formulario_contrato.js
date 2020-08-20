@@ -12,12 +12,14 @@ $(document).ready(function(){
             valorUnoDireccion = $("#valorUnoDireccion").val(),
             valorDosDireccion = $("#valorDosDireccion").val(),
             ubicacionDireccionSeccionuno = $("#ubicacionDireccionSeccionuno").val(),
-            ciudadSeccionUno = $("#ciudadSeccionUno").val(),
             barrioSeccionUno = $("#barrioSeccionUno").val(),
             emailTitular = $("#emailTitular").val(), 
             celularSeccionUno = $("#celularSeccionUno").val();
              tipoDocumentoSeccionUno = document.getElementById("tipoDocumentoSeccionUno").value;
              direccionLetrasSeccionUno = document.getElementById("direccionLetrasSeccionUno").value;
+             departamentoSeccionUno = document.getElementById("departamentoSeccionUno").value;
+             ciudadSeccionUno = document.getElementById("ciudadSeccionUno").value;
+
  /* -------------Datos Segunda Seccion ----------------- */
  
             direccionTrabajo = document.getElementById("direccionTrabajo").value,
@@ -25,6 +27,7 @@ $(document).ready(function(){
             letraDireccionTrabajo = document.getElementById("letraDireccionTrabajo").value,
             valorDosDireccionTrababjo = $("#valorDosDireccionTrababjo").val(),
             ubicacionDireccionTrabajo = document.getElementById("ubicacionDireccionTrabajo").value,
+            departamentoTrabajo = $("#departamentoTrabajo").val(),
             ciudadTrabajo = $("#ciudadTrabajo").val(),
             barrioTrabajo = $("#barrioTrabajo").val(),
             celularTrabajo = $("#barrioTrabajo").val(),
@@ -33,7 +36,7 @@ $(document).ready(function(){
 
 /* -------------Datos Tercera Seccion ----------------- */
             periodicidadPago = document.getElementById("periodicidadPago").value,
-            lugarDePago = $("#lugarDePago").val(),contratoDeligado = $("#contratoDeligado").val(),
+            contratoDeligado = $("#contratoDeligado").val(),
             plan = $("input:radio[name=plan]:checked").val();
 /*---------------Datos del Vocero Contrato-------------- */
             
@@ -45,7 +48,8 @@ $(document).ready(function(){
             letraDireccionVocero = document.getElementById("letraDireccionVocero").value,
             valorDosDireccionVocero = $("#valorDosDireccionVocero").val(),
             ubicacionDireccionVocero = document.getElementById("ubicacionDireccionVocero").value,
-            ciudadVocero = $("#ciudadVocero").val(),
+            departamentoVocero = document.getElementById("departamentoVocero").value,
+            ciudadVocero = document.getElementById("ciudadVocero").value,
             barrioVocero = $("#barrioVocero").val(),
             emailVocero = $("#emailVocero").val();
             celularVocero = $("#celularVocero").val();
@@ -56,18 +60,18 @@ $(document).ready(function(){
             nombreMascota = $("#nombreMascota").val(),
             especieMascota = document.getElementById("especieMascota").value,
             razaMascota = $("#razaMascota").val(),
-            edadMascota = document.getElementById("edadMascota").value;
+            edadMascota = $("#edadMascota").val(),
+            tipoEdad = document.getElementById("tipoEdad").value;
 
             return validacion_email,  nombreSeccionUno , cedulaSeccionUno,
             fechaDeNacimiento, direccionSeccionUno,valorUnoDireccion,
             valorDosDireccion, ubicacionDireccionSeccionuno,ciudadSeccionUno,
             barrioSeccionUno,celularSeccionUno,tipoDocumentoSeccionUno,
-            direccionTrabajo,valorUnoDireccionTrababjo,letraDireccionTrabajo,valorDosDireccionTrababjo,ubicacionDireccionTrabajo,barrioTrabajo,nombreEmpresa, email,periodicidadPago, lugarDePago, contratoDeligado ,plan, nombreVocero,tipoDocumentoVocero,numeroDocumentoVocero,direccionVocero,valorUnoDireccionVocero,letraDireccionVocero,valorDosDireccionVocero,ubicacionDireccionVocero,ciudadVocero,barrioVocero,emailVocero,nombreMascota,especieMascota,razaMascota,edadMascota
+            direccionTrabajo, departamentoTrabajo,valorUnoDireccionTrababjo,letraDireccionTrabajo,valorDosDireccionTrababjo,ubicacionDireccionTrabajo,barrioTrabajo,nombreEmpresa, email,periodicidadPago, contratoDeligado ,plan, nombreVocero,tipoDocumentoVocero,numeroDocumentoVocero,direccionVocero,valorUnoDireccionVocero,letraDireccionVocero,valorDosDireccionVocero,ubicacionDireccionVocero,departamentoVocero,ciudadVocero,barrioVocero,emailVocero,nombreMascota,especieMascota,razaMascota, tipoEdad ,edadMascota
         } 
 
         $("#siguienteSeccionUno").click(function(e){
             cargarDatos();
-
             if (nombreSeccionUno == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Este Campo Es Requerido");
                 $("#nombreSeccionUno").focus().addClass("sobraError border border-danger");
@@ -86,6 +90,9 @@ $(document).ready(function(){
             }else if (valorDosDireccion == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#valorDosDireccion").focus().addClass("sobraError border border-danger");
+            }else if (departamentoSeccionUno == ""){
+                $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
+                $("#departamentoSeccionUno").focus().addClass("sobraError border border-danger");
             }else if (ciudadSeccionUno == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#ciudadSeccionUno").focus().addClass("sobraError border border-danger");
@@ -110,13 +117,10 @@ $(document).ready(function(){
                     data: datos.serializeArray(),
                     success: function(res){
                         if(res == 1){
-                     
                             $("#primaraSeccion").fadeOut().attr("class", "d-none");
                             $("#segunadaSeccion").fadeIn().attr("class", "d-block");
                         }else{
-
-                            $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html(res);
-                            
+                            $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html(res);    
                         }
                     }
                 })
@@ -132,9 +136,7 @@ $(document).ready(function(){
         $("#siguienteSeccionDos").on("click", function(){
             $("#siguienteSeccionDos").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
             cargarDatos();
-            console.log(cedulaSeccionUno);
             var datosFormDos = $("#formSeccionDos");
-            var cedulaTitular = cedulaSeccionUno;
             $.ajax({
                 type : "POST",
                 url: "../servidor/controlador/controlador_datos_seccion_dos.php",
@@ -182,20 +184,6 @@ $(document).ready(function(){
   
         })
         
-        $('#datosVocero').on( 'change', function() {
-            if($(this).is(':checked')){
-                $("#nombreVocero").attr("value", nombreSeccionUno)
-                $("#tipoDocumentoVocero").val(tipoDocumentoSeccionUno)
-                $("#numeroDocumentoVocero").attr("value", cedulaSeccionUno)
-                $("#direccionVocero").val(direccionSeccionUno)
-                $("#valorUnoDireccionVocero").attr("value", valorUnoDireccion)
-                $("#letraDireccionVocero").val(direccionLetrasSeccionUno)
-                $("#valorDosDireccionVocero").attr("value", valorDosDireccion)
-                $("#ubicacionDireccionVocero").val(ubicacionDireccionSeccionuno)
-                $("#ciudadVocero").attr("value", ciudadSeccionUno)
-                $("#barrioVocero").attr("value", barrioSeccionUno)
-            }
-        })
 
         $('#atrasSeccionCuantro').on("click" , function(){
             $("#cuartaSeccion").fadeOut().attr("class", "d-none");
@@ -218,6 +206,9 @@ $(document).ready(function(){
             }else if (valorDosDireccionVocero == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#valorDosDireccionVocero").focus().addClass("sobraError border border-danger");
+            }else if (departamentoVocero == ""){
+                $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
+                $("#departamentoVocero").focus().addClass("sobraError border border-danger");
             }else if (ciudadVocero == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#ciudadVocero").focus().addClass("sobraError border border-danger");
@@ -227,8 +218,8 @@ $(document).ready(function(){
             }else if (emailVocero == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#emailVocero").focus().addClass("sobraError border border-danger");
-           }else if (!validacion_email.test(emailTitular)){
-                $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
+           }else if (!validacion_email.test(emailVocero)){
+                $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Revisa el campo Email debe incluir @");
                 $("#emailVocero").focus().addClass("sobraError border border-danger");
             }else if(celularVocero == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
@@ -278,6 +269,9 @@ $(document).ready(function(){
             }else if (edadMascota == ""){
                 $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
                 $("#edadMascota").focus().addClass("sobraError border border-danger");
+            }else if (tipoEdad == ""){
+                $("#mensajesContacto").fadeIn().addClass("mensajesAparece bg-danger text-white").html("Los Campos Marcados En Rojo Son Obligatorios");
+                $("#tipoEdad").focus().addClass("sobraError border border-danger");
             }else{
             $("#vistaPrevia").html("<img src='../img/cargando.gif' alt='loading' width='32' height='32' />")
                 
@@ -287,9 +281,10 @@ $(document).ready(function(){
                 datos.append("especieMascota", $("#especieMascota").val());
                 datos.append("razaMascota", $("#razaMascota").val());
                 datos.append("edadMascota", $("#edadMascota").val());
+                datos.append("tipoEdad", $("#tipoEdad").val());
                 datos.append("pesoMascota", $("#pesoMascota").val());
                 datos.append("cedulaTitular", $("#cedulaSeccionUno").val());
-                datos.append("carneMascota", $("#carneMascota")[0].files[0]);
+               // datos.append("carneMascota", $("#carneMascota")[0].files[0]);
                 datos.append("fotoMascota", $("#fotoMascota")[0].files[0]);
                 var cedulaTitular = cedulaSeccionUno;
                 $.ajax({
@@ -310,13 +305,14 @@ $(document).ready(function(){
                  }
                 })
             }
+            return false;
         })
 
         
 
-        $("#nombreSeccionUno, #nombreSeccionUno, #cedulaSeccionUno, #fechaDeNacimiento, #valorUnoDireccion, #valorDosDireccion, #ciudadSeccionUno, #barrioSeccionUno,#celularSeccionUno,#valorUnoDireccionTrababjo,#valorDosDireccionTrababjo,#ciudadTrabajo,#barrioTrabajo,#nombreEmpresa,#email,#emailVocero,#barrioVocero,#ciudadVocero, #valorDosDireccionVocero,#valorUnoDireccionVocero,#valorDosDireccionVocero,#numeroDocumentoVocero, #nombreVocero,#nombreMascota,#especieMascota,#razaMascota,#edadMascota").bind('blur keyup', function(){
+        $("#nombreSeccionUno, #nombreSeccionUno, #cedulaSeccionUno, #fechaDeNacimiento, #valorUnoDireccion, #valorDosDireccion, #departamentoSeccionUno ,#ciudadSeccionUno, #barrioSeccionUno,#celularSeccionUno,#valorUnoDireccionTrababjo,#valorDosDireccionTrababjo,#ciudadTrabajo,#barrioTrabajo,#nombreEmpresa,#email,#emailVocero,#barrioVocero,#ciudadVocero, #valorDosDireccionVocero,#valorUnoDireccionVocero,#valorDosDireccionVocero,#numeroDocumentoVocero, #nombreVocero,#nombreMascota,#especieMascota,#razaMascota,#edadMascota").bind('blur keyup', function(){
             if($(this).val() != ""){
-                    $("#nombreSeccionUno, #nombreSeccionUno, #cedulaSeccionUno, #fechaDeNacimiento, #valorUnoDireccion, #valorDosDireccion, #ciudadSeccionUno, #barrioSeccionUno,#celularSeccionUno,#valorUnoDireccionTrababjo,#valorDosDireccionTrababjo,#ciudadTrabajo,#barrioTrabajo,#nombreEmpresa,#email,#emailVocero,#barrioVocero,#ciudadVocero, #valorDosDireccionVocero,#valorUnoDireccionVocero,#numeroDocumentoVocero,#nombreVocero,#nombreMascota,#especieMascota,#razaMascota,#edadMascota").removeClass("sobraError border border-danger");
+                    $("#nombreSeccionUno, #nombreSeccionUno, #cedulaSeccionUno, #fechaDeNacimiento, #valorUnoDireccion, #valorDosDireccion,#departamentoSeccionUno ,#ciudadSeccionUno, #barrioSeccionUno,#celularSeccionUno,#valorUnoDireccionTrababjo,#valorDosDireccionTrababjo,#ciudadTrabajo,#barrioTrabajo,#nombreEmpresa,#email,#emailVocero,#barrioVocero, #departamentoVocero,#ciudadVocero, #valorDosDireccionVocero,#valorUnoDireccionVocero,#numeroDocumentoVocero,#nombreVocero,#nombreMascota,#especieMascota,#razaMascota,#edadMascota").removeClass("sobraError border border-danger");
                     $("#mensajesContacto").fadeOut().removeClass("mensajesAparece bg-danger text-white");
             }
         })
